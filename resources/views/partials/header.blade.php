@@ -1,7 +1,7 @@
 <header>
     <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
-                <a class="navbar-brand d-flex align-items-center text-danger" href="{{ route("projects.index") }}">
+                <a class="navbar-brand d-flex align-items-center text-primary" href="{{ route("projects.index") }}">
                     <h1 class="display-5">🃏</h1>{{ config('app.name', 'Laravel') }}
                 </a>
 
