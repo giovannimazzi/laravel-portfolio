@@ -17,6 +17,7 @@
                             <th>Description</th>
                             <th>Start Date</th>
                             <th>End Date</th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -36,6 +37,9 @@
                                 </td>
                                 <td>
                                     {{$project->end_date}}
+                                </td>
+                                <td>
+                                    <a href="{{route('projects.show', $project)}}" class="btn btn-outline-primary">View Details</a>
                                 </td>
                             </tr>
                         @endforeach
