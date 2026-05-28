@@ -38,8 +38,10 @@
 
         @include('partials.header')
 
-        <main class="">
-            @yield('content')
+        <main>
+            <div class="container py-4">
+                @yield('content')
+            </div>
         </main>
     </div>
 </body>
