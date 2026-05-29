@@ -18,19 +18,19 @@
 
                 <div class="mb-3 d-flex flex-column">
                     <label for="name">Name:</label>
-                    <input type="text" name="name" id="name" class="form-control" value="{{$project->name}}">
+                    <input type="text" name="name" id="name" class="form-control" value="{{$project->name}}" required>
                 </div>
                 <div class="mb-3 d-flex flex-column">
                     <label for="customer">Customer:</label>
-                    <input type="text" name="customer" id="customer" class="form-control" value="{{$project->customer}}">
+                    <input type="text" name="customer" id="customer" class="form-control" value="{{$project->customer}}" required>
                 </div>
                 <div class="mb-3 d-flex flex-column">
                     <label for="description">Description:</label>
-                    <textarea name="description" id="description" rows="5" class="form-control">{{$project->description}}</textarea>
+                    <textarea name="description" id="description" rows="5" class="form-control" required>{{$project->description}}</textarea>
                 </div>
                 <div class="mb-3 d-flex flex-column">
                     <label for="start_date">Start Date:</label>
-                    <input type="date" name="start_date" id="start_date" class="form-control" value="{{$project->start_date}}">
+                    <input type="date" name="start_date" id="start_date" class="form-control" value="{{$project->start_date}}" required>
                 </div>
                 <div class="mb-3 d-flex flex-column">
                     <label for="end_date">End Date:</label>
