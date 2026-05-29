@@ -21,7 +21,7 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        //
+        return view('crud.projects-create');
     }
 
     /**
@@ -29,7 +29,19 @@ class ProjectController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+
+        $newProject = new Project();
+
+        $newProject->name = $data['name'];
+        $newProject->customer = $data['customer'];
+        $newProject->description = $data['description'];
+        $newProject->start_date = $data['start_date'];
+        $newProject->end_date = $data['end_date'];
+
+        $newProject->save();
+
+        return redirect()->route('projects.show', $newProject);
     }
 
     /**
