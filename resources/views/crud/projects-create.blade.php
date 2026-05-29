@@ -25,8 +25,7 @@
                 </div>
                 <div class="mb-3 d-flex flex-column">
                     <label for="description">Description:</label>
-                    <textarea name="description" id="description" rows="5" class="form-control">
-                    </textarea>
+                    <textarea name="description" id="description" rows="5" class="form-control"></textarea>
                 </div>
                 <div class="mb-3 d-flex flex-column">
                     <label for="start_date">Start Date:</label>
