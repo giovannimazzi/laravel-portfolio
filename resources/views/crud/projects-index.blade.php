@@ -22,6 +22,8 @@
                             <th>Start Date</th>
                             <th>End Date</th>
                             <th></th>
+                            <th></th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -43,7 +45,13 @@
                                     {{$project->end_date}}
                                 </td>
                                 <td>
-                                    <a href="{{route('projects.show', $project)}}" class="btn btn-outline-primary">View Details</a>
+                                    <a href="{{route('projects.show', $project)}}" class="btn btn-outline-primary" title="View Details"><i class="bi bi-eye"></i></a>
+                                </td>
+                                <td>
+                                    <a href="{{route('projects.edit', $project)}}" class="btn btn-outline-success" title="Edit"><i class="bi bi-pencil"></i></a>
+                                </td>
+                                <td>
+                                    <a href="{{route('projects.destroy', $project)}}" class="btn btn-outline-danger" title="Delete"><i class="bi bi-trash3"></i></a>
                                 </td>
                             </tr>
                         @endforeach
