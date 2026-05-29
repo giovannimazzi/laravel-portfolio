@@ -51,9 +51,11 @@
                                     <a href="{{route('projects.edit', $project)}}" class="btn btn-outline-success" title="Edit"><i class="bi bi-pencil"></i></a>
                                 </td>
                                 <td>
-                                    <a href="{{route('projects.destroy', $project)}}" class="btn btn-outline-danger" title="Delete"><i class="bi bi-trash3"></i></a>
+                                    <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#m{{$project->id}}" title="Delete">
+                                            <i class="bi bi-trash"></i></button>    
                                 </td>
                             </tr>
+                            <x-modal :project="$project"></x-modal>
                         @endforeach
                     </tbody>
                 </table>

@@ -1,5 +1,7 @@
 @extends('layouts.admin')
 
+<x-modal :project="$project"></x-modal>
+
 @section('content')
 
     <div class="card shadow-sm">
@@ -27,6 +29,10 @@
             <h5>End Date:</h5>
             <p>{{$project->end_date}}</p>
             <hr/>
+            <div class="d-flex justify-content-end gap-2">
+                <a href="{{route('projects.edit', $project)}}" class="btn btn-outline-success" title="Edit"><i class="bi bi-pencil"></i></a>
+                <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#m{{$project->id}}" title="Delete"><i class="bi bi-trash"></i></button>   
+            </div>         
         </div>
     </div>
 
