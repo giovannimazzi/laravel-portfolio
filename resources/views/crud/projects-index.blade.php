@@ -4,8 +4,12 @@
 
     <div class="card shadow-sm">
         
-        <div class="card-header bg-primary text-white">
+        <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
             <h3 class="mb-0">Projects List</h3>
+            <a href="{{route("projects.create")}}" class="btn btn-outline-dark">
+                <i class="bi bi-plus-circle"></i>
+                Add Project
+            </a>
         </div>
         <div class="card-body">
             <div class="table-responsive">
