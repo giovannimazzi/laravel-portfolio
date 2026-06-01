@@ -21,6 +21,15 @@
                     <input type="text" name="name" id="name" class="form-control" value="{{$project->name}}" required>
                 </div>
                 <div class="mb-3 d-flex flex-column">
+                    <label for="type_id">Type:</label>
+                    <select name="type_id" id="type_id" class="form-control">
+                        <option value="" {{ $project->type_id ? '' : 'selected' }}>---</option>
+                        @foreach ($types as $type)
+                            <option value="{{ $type->id }}" {{ $type->id == $project->type_id ? 'selected' : '' }}>{{ $type->name }}</option>
+                        @endforeach
+                    </select>
+                </div>
+                <div class="mb-3 d-flex flex-column">
                     <label for="customer">Customer:</label>
                     <input type="text" name="customer" id="customer" class="form-control" value="{{$project->customer}}" required>
                 </div>

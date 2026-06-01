@@ -17,6 +17,9 @@
             <h5>Name:</h5>
             <p class="fw-bold"><big>{{$project->name}}</big></p>
             <hr/>
+            <h5>Type:</h5>
+            <p class="text-primary fw-semibold"><big>{{$project->type?->name ?? '---'}}</big></p>
+            <hr/>
             <h5>Customer:</h5>
             <p>{{$project->customer}}</p>
             <hr/>

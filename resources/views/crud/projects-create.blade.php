@@ -20,6 +20,15 @@
                     <input type="text" name="name" id="name" class="form-control" required>
                 </div>
                 <div class="mb-3 d-flex flex-column">
+                    <label for="type_id">Type:</label>
+                    <select name="type_id" id="type_id" class="form-control">
+                        <option value="">---</option>
+                        @foreach ($types as $type)
+                            <option value="{{ $type->id }}">{{ $type->name }}</option>
+                        @endforeach
+                    </select>
+                </div>
+                <div class="mb-3 d-flex flex-column">
                     <label for="customer">Customer:</label>
                     <input type="text" name="customer" id="customer" class="form-control" required>
                 </div>

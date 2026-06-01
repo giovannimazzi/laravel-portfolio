@@ -17,6 +17,7 @@
                     <thead class="table-dark">
                         <tr>
                             <th>Name</th>
+                            <th>Type</th>
                             <th>Customer</th>
                             <th>Description</th>
                             <th>Start Date</th>
@@ -31,6 +32,9 @@
                             <tr>
                                 <td class="fw-bold">
                                     {{$project->name}}
+                                </td>
+                                <td class="text-primary fw-semibold">
+                                    {{ $project->type?->name ?? '---'}}
                                 </td>
                                 <td>
                                     {{$project->customer}}

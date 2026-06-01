@@ -3,6 +3,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Project;
+use App\Models\Type;
 use Illuminate\Http\Request;
 
 class ProjectController extends Controller
@@ -21,7 +22,8 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        return view('crud.projects-create');
+        $types = Type::all();
+        return view('crud.projects-create', compact('types'));
     }
 
     /**
@@ -34,6 +36,7 @@ class ProjectController extends Controller
         $newProject = new Project();
 
         $newProject->name = $data['name'];
+        $newProject->type_id = $data['type_id'];
         $newProject->customer = $data['customer'];
         $newProject->description = $data['description'];
         $newProject->start_date = $data['start_date'];
@@ -57,7 +60,8 @@ class ProjectController extends Controller
      */
     public function edit(Project $project)
     {
-        return view("crud.projects-edit", compact('project'));
+        $types = Type::all();
+        return view("crud.projects-edit", compact('project', 'types'));
     }
 
     /**
@@ -68,6 +72,7 @@ class ProjectController extends Controller
         $data = $request->all();
 
         $project->name = $data['name'];
+        $project->type_id = $data['type_id'];
         $project->customer = $data['customer'];
         $project->description = $data['description'];
         $project->start_date = $data['start_date'];
