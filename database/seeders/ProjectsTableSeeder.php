@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Project;
+use App\Models\Type;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -22,6 +23,8 @@ class ProjectsTableSeeder extends Seeder
             $newProject = new Project();
 
             $newProject->name = $faker->sentence(3);
+            
+            $newProject->type_id = rand(1,8);
 
             $newProject->customer = $faker->company();
 
