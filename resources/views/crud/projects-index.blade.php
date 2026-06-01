@@ -59,7 +59,7 @@
                                             <i class="bi bi-trash"></i></button>    
                                 </td>
                             </tr>
-                            <x-modal :project="$project"></x-modal>
+                            <x-modal :entity="$project"></x-modal>
                         @endforeach
                     </tbody>
                 </table>

@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-<x-modal :project="$project"></x-modal>
+<x-modal :entity="$project"></x-modal>
 
 @section('content')
 
