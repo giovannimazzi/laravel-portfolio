@@ -20,6 +20,17 @@
             <h5>Type:</h5>
             <p class="text-primary fw-semibold"><big>{{$project->type?->name ?? '---'}}</big></p>
             <hr/>
+            @if (count($project->technologies) > 0)    
+                <h5>Technologies:</h5>
+                @foreach ($project->technologies as $technology)
+                    <span 
+                        class="badge" 
+                        style="background-color: {{ $technology->color }}">
+                        {{ $technology->name }}
+                    </span>
+                @endforeach
+                <hr/>
+            @endif
             <h5>Customer:</h5>
             <p>{{$project->customer}}</p>
             <hr/>
