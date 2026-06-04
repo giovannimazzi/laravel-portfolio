@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Project;
-use App\Models\Type;
+use App\Models\Technology;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -35,6 +35,12 @@ class ProjectsTableSeeder extends Seeder
             $newProject->end_date = $endDate;
 
             $newProject->save();
+
+            $technologies = Technology::inRandomOrder()
+            ->limit(rand(1, 4))
+            ->pluck('id');
+
+            $newProject->technologies()->attach($technologies);
         }
     }
 }
