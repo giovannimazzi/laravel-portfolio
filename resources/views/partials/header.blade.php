@@ -13,10 +13,13 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route("admin.index") }}">{{ __('Home') }}</a>
+                            <a class="nav-link {{ request()->routeIs('admin.*') ? 'active' : '' }}" href="{{ route("admin.index") }}">{{ __('Home') }}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route("types.index") }}">{{ __('Types') }}</a>
+                            <a class="nav-link {{ request()->routeIs('types.*') ? 'active' : '' }}" href="{{ route("types.index") }}">{{ __('Types') }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {{ request()->routeIs('technologies.*') ? 'active' : '' }}" href="{{ route("technologies.index") }}">{{ __('Technologies') }}</a>
                         </li>
                     </ul>
 
