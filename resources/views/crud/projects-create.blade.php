@@ -12,7 +12,7 @@
             </a>
         </div>
         <div class="card-body">
-            <form action="{{route('projects.store')}}" method="POST">
+            <form action="{{route('projects.store')}}" method="POST" enctype="multipart/form-data">
                 @csrf
         
                 <div class="mb-3 d-flex flex-column">
@@ -40,6 +40,10 @@
                         <label for="tech-{{$technology->id}}">{{ $technology->name }}</label>
                     </div>
                     @endforeach
+                </div>
+                <div class="mb-3 d-flex flex-wrap form-control" id="tech">
+                    <label for="image" class="me-2">Image:</label>
+                    <input type="file" id="image" name="image">
                 </div>
                 <div class="mb-3 d-flex flex-column">
                     <label for="customer">Customer:</label>
