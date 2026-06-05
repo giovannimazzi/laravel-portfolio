@@ -18,7 +18,8 @@
                 <div id="post-image">
                     <img 
                         src="{{ asset("storage/" . $project->image) }}" 
-                        alt="{{$project->name}}">
+                        alt="{{$project->name}}"
+                        class="img-fluid w-100">
                 </div>
             @endif
             <h5>Name:</h5>
