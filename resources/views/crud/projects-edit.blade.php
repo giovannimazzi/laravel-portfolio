@@ -12,7 +12,7 @@
             </a>
         </div>
         <div class="card-body">
-            <form action="{{route('projects.update', $project)}}" method="POST">
+            <form action="{{route('projects.update', $project)}}" method="POST" enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
 
@@ -42,6 +42,18 @@
                         <label for="tech-{{$technology->id}}">{{ $technology->name }}</label>
                     </div>
                     @endforeach
+                </div>
+                <div class="mb-3 d-flex flex-wrap form-control gap-3" id="tech">
+                    <label for="image">Image:</label>
+                    <input type="file" id="image" name="image">
+                    @if($project->image)
+                        <div id="post-image">
+                            <img 
+                                src="{{ asset("storage/" . $project->image) }}" 
+                                alt="{{$project->name}}"
+                                class="img-fluid w-25">
+                        </div>
+                    @endif
                 </div>
                 <div class="mb-3 d-flex flex-column">
                     <label for="customer">Customer:</label>
