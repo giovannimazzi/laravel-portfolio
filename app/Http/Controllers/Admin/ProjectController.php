@@ -100,7 +100,7 @@ class ProjectController extends Controller
         $project->end_date = $data['end_date'];
 
         if(array_key_exists('image', $data)){
-            
+
             Storage::delete($project->image);
 
             $img_url = Storage::putFile('projects', $data['image']);
@@ -124,6 +124,10 @@ class ProjectController extends Controller
      */
     public function destroy(Project $project)
     {
+        if($project->image){
+            Storage::delete($project->image);
+        }
+
         $project->delete();
 
         return redirect()->route('projects.index');
