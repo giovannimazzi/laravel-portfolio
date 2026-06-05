@@ -49,7 +49,11 @@ class ProjectController extends Controller
 
         if(array_key_exists('image', $data)){
             $img_url = Storage::putFile('projects', $data['image']);
+
+            $newProject->image = $img_url;
         }
+
+
 
         $newProject->save();
 
