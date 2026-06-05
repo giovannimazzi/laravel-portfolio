@@ -14,6 +14,13 @@
             </a>
         </div>
         <div class="card-body">
+            @if($project->image)
+                <div id="post-image">
+                    <img 
+                        src="{{ asset("storage/" . $project->image) }}" 
+                        alt="{{$project->name}}">
+                </div>
+            @endif
             <h5>Name:</h5>
             <p class="fw-bold"><big>{{$project->name}}</big></p>
             <hr/>
