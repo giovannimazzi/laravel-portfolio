@@ -41,8 +41,8 @@
                     </div>
                     @endforeach
                 </div>
-                <div class="mb-3 d-flex flex-wrap form-control" id="tech">
-                    <label for="image" class="me-2">Image:</label>
+                <div class="mb-3 d-flex flex-wrap form-control gap-3" id="tech">
+                    <label for="image">Image:</label>
                     <input type="file" id="image" name="image">
                 </div>
                 <div class="mb-3 d-flex flex-column">
